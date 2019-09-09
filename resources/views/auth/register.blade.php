@@ -1,14 +1,14 @@
 @include('include.contacto.personas.form', array('persona'=>$cliente->persona))
 @extends('layouts.store.main')
 @section('template_title')
-Registrarse | {{ config('app.name', 'Laravel') }}
+Registrarse | ArtTukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
 <style type="text/css">
 body {
-    background: url("{{ asset('img/guest/register/background.jpg') }}")no-repeat center center;
+    background: url("{{ asset('img/guest/register/background.jpg') }}")repeat center center fixed;
     background-size: cover;
 }
 .card{

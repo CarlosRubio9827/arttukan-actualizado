@@ -1,12 +1,12 @@
 @extends('layouts.store.main')
 @section('template_title')
-Lista de productos | {{ config('app.name', 'Laravel') }}
+Lista de productos | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
 <style type="text/css">
     body {
-        background: url("{{ asset('img/guest/store/producto/background.jpg') }}")no-repeat center center;
+        background: url("{{ asset('img/guest/store/producto/background1.jpg') }}")no-repeat center center;
         background-size: cover;
     }
     </style>

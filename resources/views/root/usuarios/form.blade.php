@@ -33,35 +33,7 @@
         </div>
         <!-- Grid column -->
 
-          <!-- Grid column -->
-          <div class="col-md-6">
-            <!-- Material input -->
-            <div class="md-form">
-            <i class="fas fa-user-tie"></i>
-            <small for="rol">Rol *</small>
-    <select class="form-control" required id="role_id" name="role_id">
-    <option value="" disabled selected>Selecciona una opción</option>
-    
-    @if ($default_role)
-    <option selected value="{{$default_role->id}}">{{$default_role->display_name}}</option>
-    @else
-        @if ($usuario->roles->count() > 0)
-            @foreach($roles as $key => $role)
-                <option {{ old('role_id') ?  ((old('role__id') == $role->id) ? 'selected' : '') : (($editar && $usuario->roles->first()->id == $role->id) ? 'selected' : '') }} value="{{$role->id}}">{{$role->display_name}}</option>
-            @endforeach
-        @endif
-    @endif
-</select>
-</div> @if ($errors->has('role_id'))
-                                            <div class="hoverable waves-light alert alert-danger alert-dismissible fade show" role="alert">
-                                           {{ $errors->first('role_id') }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-                                
-                                @endif
-        </div>
+         
         <!-- Grid column -->
         </div>
     <!-- Grid row -->

@@ -1,5 +1,5 @@
 @section('template_title')
-Página principal | {{ config('app.name', 'Laravel') }}
+Página principal | ArtTukan
 @endsection
 @section('css_links')
 <script type="text/javascript" src="{{ asset('js/highcharts/highcharts.js') }}"></script>

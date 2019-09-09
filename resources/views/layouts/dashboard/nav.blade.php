@@ -56,7 +56,7 @@ function salir(){
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
         <div class="sidebar-brand waves-light">
-            <a href="javascript:void(0)"><i class="fas fa-tools mr-2"></i> IRAPP</a>
+            <a href="javascript:void(0)"><i class="fas fa-tools mr-2"></i> ARTTUKAN</a>
             <div id="close-sidebar">
                 <i class="fas fa-lg fa-arrow-circle-left "></i>
             </div>

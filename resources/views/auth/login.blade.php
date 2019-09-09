@@ -1,12 +1,12 @@
 @extends('layouts.guest.main')
 @section('template_title')
-Iniciar sesión | {{ config('app.name', 'Laravel') }}
+Iniciar sesión | ArtTukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">
 <style type="text/css">
 body {
-    background: url("{{ asset('img/guest/login/background.jpg') }}")no-repeat center center;
+    background: url("{{ asset('img/guest/login/background.jpg') }}")repeat center center fixed;
     background-size: cover;
 }
 table{
@@ -26,7 +26,7 @@ tbody{
 @section('content')
   <!--Intro Section-->
   <section class="view intro-2">
-        <div class="mask pattern-6 flex-center"></div>
+        <div class="mask pattern-1 flex-center"></div>
                 <div class="full-bg-img">
                     <div class="container flex-center">
                         <div class="d-flex align-items-center content-height">

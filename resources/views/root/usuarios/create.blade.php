@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('root.usuarios.form')
 @section('template_title')
-Registrar un usuario | {{ config('app.name', 'Laravel') }}
+Registrar un usuario | ArtTukan
 @endsection
 @section('content')
 

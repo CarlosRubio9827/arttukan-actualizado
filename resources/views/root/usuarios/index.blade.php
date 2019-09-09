@@ -1,9 +1,9 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Lista de usuarios | {{ config('app.name', 'Laravel') }}
+Lista de usuarios | ArtTukan
 @endsection
 @section('footer_title')
-Lista de usuarios | {{ config('app.name', 'Laravel') }}
+Lista de usuarios | ArtTukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">

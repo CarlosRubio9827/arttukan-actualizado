@@ -5,7 +5,7 @@
 
       <!-- Brand -->
       <a class="navbar-brand" href="{{ route('welcome') }}" >
-        <strong> <i class="fas fa-tools mr-2"></i>{{ config('app.name', 'Laravel') }}</strong>
+        <strong><img src="{{ asset('img/arttukan/logofinal2.png') }}" alt=""  width="30" height="30"> Art Tukan</strong>
       </a>
 
       <!-- Collapse -->

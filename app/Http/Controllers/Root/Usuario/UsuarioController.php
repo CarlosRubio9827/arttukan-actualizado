@@ -23,7 +23,7 @@ class UsuarioController extends Controller
      * Display a listing of the resource.
      *
      * @return Response
-     */
+     */   
     public function index()
     {
         Auth::user()->authorizeRoles('ROLE_ROOT',TRUE);
@@ -40,10 +40,9 @@ class UsuarioController extends Controller
     {
         Auth::user()->authorizeRoles('ROLE_ROOT',TRUE);
         $usuario = new User;
-        $roles = Role::limit(2)->get();
         $editar = false;
-        return View::make('root.usuarios.create')->with(compact('usuario','roles','editar'));
-    }
+        return View::make('root.usuarios.create')->with(compact('usuario','editar'));
+    } 
 
     /**
      * Store a newly created resource in storage.
@@ -58,7 +57,7 @@ class UsuarioController extends Controller
                 'email'                 => 'required|email|max:100|unique:users',
                 'password'              => 'required|between:6,50|confirmed',
                 'password_confirmation' => 'required|same:password',
-                'role_id'                   => 'required',
+              
         );
 
         $validator = Validator::make($request->all(), $rules);
@@ -70,7 +69,7 @@ class UsuarioController extends Controller
             return Redirect::to('usuarios/create')
                 ->withErrors($validator);
         } else {
-            $role = Role::findOrFail($request->role_id);
+            $role = Role::findOrFail(4);
             $usuario = new User;
             $usuario->name = $request->name;
             $usuario->email = $request->email;
