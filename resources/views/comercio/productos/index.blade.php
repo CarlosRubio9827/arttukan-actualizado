@@ -74,8 +74,8 @@ Lista de productos | {{ config('app.name', 'Laravel') }}
     </th>
     <th class="th-sm">Categoria
     </th>
-    <th class="th-sm">Medida
-    </th>
+    {{-- <th class="th-sm">Medida
+    </th> --}}
       <th class="th-sm">Marca
       </th>
       <th class="th-sm">Acciones
@@ -130,12 +130,12 @@ Lista de productos | {{ config('app.name', 'Laravel') }}
                             </a>    
                         </td>
 
-            <td>
+            {{-- <td>
                 <a href="{{ route('medidas.show',$producto->medida->id) }}" class="link-text"
                     data-toggle="tooltip" data-placement="bottom" title='Información de la medida "{{ $producto->medida->nombre }}"'>
                       <i class="fas fa-ruler"></i> {{$producto->medida->nombre}}
                             </a> 
-            </td>
+            </td> --}}
 
             <td>
                 <a href="{{ route('marcas.show',$producto->marca->id) }}" class="link-text"

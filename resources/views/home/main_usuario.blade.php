@@ -6,7 +6,7 @@
 @include('include.actividad.ordenes.div_ordenes', array('ordenes'=>$ordenes))
 
 @section('template_title')
-Página principal | {{ config('app.name', 'Laravel') }}
+Página principal | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">

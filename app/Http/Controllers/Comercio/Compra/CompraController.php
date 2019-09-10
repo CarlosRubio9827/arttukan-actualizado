@@ -96,7 +96,7 @@ class CompraController extends Controller
             return Redirect::to('compras/create')
                 ->withErrors($validator);
         } else {
-            $compra = new Compra;   
+            $compra = new Compra;     
             $compra->fecha = $request->fecha;
            $compra->save();        
 

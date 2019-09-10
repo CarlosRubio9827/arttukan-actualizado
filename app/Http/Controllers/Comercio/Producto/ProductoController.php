@@ -75,7 +75,7 @@ class ProductoController extends Controller
                 'nombre'                   => 'required|max:50',
                 'valor_unitario'                   => 'numeric|required|digits_between:1,12',
                 'referencia'                   => 'required|max:50',
-                'medida_id'                   => 'required',
+                //'medida_id'                   => 'required',
                 'marca_id'                   => 'required',
                 'categoria_id'                   => 'required',
                 'tipo_referencia_id'            => 'required',
@@ -100,12 +100,12 @@ class ProductoController extends Controller
             $producto->limite = 0;
             $producto->alerta = true; 
             $producto->categoria()->associate(Categoria::findOrFail($request->categoria_id));      
-            $producto->medida()->associate(Medida::findOrFail($request->medida_id));      
+            //$producto->medida()->associate(Medida::findOrFail($request->medida_id));      
             $producto->marca()->associate(Marca::findOrFail($request->marca_id));      
             $producto->tipo_referencia()->associate(Tipo_referencia::findOrFail($request->tipo_referencia_id));  
             $producto->save();        
 
-            SweetAlert::success('Exito','El producto "'.$producto->nombre.'" ha sido registrada.');
+            SweetAlert::success('Exito','El producto "'.$producto->nombre.'" ha sido registrado.');
             return Redirect::to('productos/'.$producto->id);
         }
     }
@@ -157,7 +157,7 @@ class ProductoController extends Controller
             'nombre'                   => 'required|max:50',
             'valor_unitario'                   => 'numeric|required|digits_between:1,12',
             'referencia'                   => 'required|max:50',
-            'medida_id'                   => 'required',
+            //'medida_id'                   => 'required',
             'marca_id'                   => 'required',
             'categoria_id'                   => 'required',
             'tipo_referencia_id'            => 'required',
@@ -178,12 +178,12 @@ class ProductoController extends Controller
         $producto->valor_unitario = $request->valor_unitario; 
         $producto->descripcion = $request->descripcion; 
         $producto->categoria()->associate(Categoria::findOrFail($request->categoria_id));      
-        $producto->medida()->associate(Medida::findOrFail($request->medida_id));      
+        //$producto->medida()->associate(Medida::findOrFail($request->medida_id));      
         $producto->marca()->associate(Marca::findOrFail($request->marca_id));      
         $producto->tipo_referencia()->associate(Tipo_referencia::findOrFail($request->tipo_referencia_id));  
        $producto->save(); 
       
-        SweetAlert::success('Exito','El producto "'.$producto->nombre.'" ha sido editada.');
+        SweetAlert::success('Exito','El producto "'.$producto->nombre.'" ha sido editado.');
         return Redirect::to('productos');
     }
     }

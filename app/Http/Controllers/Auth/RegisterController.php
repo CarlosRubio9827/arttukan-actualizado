@@ -115,8 +115,8 @@ public function showRegistrationForm()
             'telefono_movil'                   => 'required|max:50',
             'barrio'                   => 'required|max:50',
             'direccion'                   => 'required|max:50',
-            'latitud'                   => 'required|max:50',
-            'longitud'                   => 'required|max:50',
+            // 'latitud'                   => 'required|max:50',
+            // 'longitud'                   => 'required|max:50',
             'ciudad_id'              => 'required',
             'name'                  => 'required|max:50|unique:users',
                 'email'                 => 'required|email|max:100|unique:users',
@@ -148,8 +148,8 @@ public function showRegistrationForm()
             $ubicacion = new Ubicacion;
             $direccion = new Direccion;
 
-            $ubicacion->latitud = $request->latitud;
-            $ubicacion->longitud = $request->longitud;
+            $ubicacion->latitud = "3.5221006057596975";
+            $ubicacion->longitud = "-76.29353920932567";
             $ubicacion->save();
 
             $usuario = User::findOrFail($usuario->id);

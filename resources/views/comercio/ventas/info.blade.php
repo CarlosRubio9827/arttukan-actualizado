@@ -50,13 +50,13 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
                             <form method="POST" id="pagar{{ $compra->id }}" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
                               <input name="merchantId"    type="hidden"  value="508029">
                               <input name="accountId"     type="hidden"  value="512321">
-                              <input name="description"   type="hidden"  value="Compra de productos en IRAPP">
-                              <input name="referenceCode" type="hidden"  value="IRAPP_{{$compra->id}}">
+                              <input name="description"   type="hidden"  value="Compra de productos en Art Tukan">
+                              <input name="referenceCode" type="hidden"  value="ArtTukan_{{$compra->id}}">
                               <input name="amount"        type="hidden"  value="{{$pay}}">
                               <input name="tax"           type="hidden"  value="0">
-                              <input name="taxReturnBase" type="hidden"  value="0">
+                              <input name="taxReturnBase" type="hidden"  value="0">  
                               <input name="currency"      type="hidden"  value="COP">
-                              <input name="signature"     type="hidden"  value="{{md5('4Vj8eK4rloUd272L48hsrarnUA~508029~IRAPP_'.$compra->id.'~'.$pay.'~COP')}}">
+                              <input name="signature"     type="hidden"  value="{{md5('4Vj8eK4rloUd272L48hsrarnUA~508029~ArtTukan_'.$compra->id.'~'.$pay.'~COP')}}">
                               <input name="test"          type="hidden"  value="1">
                               <input name="buyerEmail"    type="hidden"  value="{{$compra->cliente->persona->usuario->email}}">
                               <input name="buyerFullName"    type="hidden"  value="{{$compra->cliente->persona->primer_nombre}} {{$compra->cliente->persona->segundo_nombre}} {{$compra->cliente->persona->primer_apellido}} {{$compra->cliente->persona->segundo_apellido}}">

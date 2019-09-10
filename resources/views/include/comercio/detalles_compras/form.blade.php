@@ -44,7 +44,7 @@
 <div class="form-row">
 
 <!-- Grid column -->
-<div class="col-md-6">
+<div class="col-md-12">
 <!-- Material input -->
 
 <div class="md-form">
@@ -61,7 +61,7 @@
 <!-- Grid column -->
 
 <!-- Grid column -->
-<div class="col-md-6">
+{{-- <div class="col-md-6">
 <!-- Material input -->
 
 <div class="md-form">
@@ -74,7 +74,7 @@
 @endif
 </select>
 </div> 
-</div>
+</div> --}}
 <!-- Grid column -->
 
 </div>

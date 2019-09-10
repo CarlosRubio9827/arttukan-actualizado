@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.comercio.compras.div_compras', array('compras'=>$compras))
 @section('template_title')
-Lista de compras | {{ config('app.name', 'Laravel') }}
+Lista de compras | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">

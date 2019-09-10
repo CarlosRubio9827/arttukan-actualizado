@@ -112,10 +112,10 @@
     <!-- Grid row -->
 
   <!-- Grid row -->
-  <div class="form-row">
+  
 
  <!-- Grid column -->
- <div class="col-md-6">
+ {{-- <div class="col-md-6">
        
         <!-- Material input -->
 
@@ -124,7 +124,9 @@
 <small for="medida_id">Medida *</small>   
 @include('include.dato_basico.medidas.select', array('medida_selected'=>$producto->medida))
 
-</div> @if ($errors->has('medida_id'))
+</div> 
+
+@if ($errors->has('medida_id'))
                           <div class="hoverable waves-light alert alert-danger alert-dismissible fade show" role="alert">
                          {{ $errors->first('medida_id') }}
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -134,9 +136,9 @@
               
               @endif
          
-</div>
+</div> --}}
 <!-- Grid column -->
-
+<div class="form-row">
  <!-- Grid column -->
  <div class="col-md-6">
        
@@ -158,14 +160,7 @@
          
 </div>
 <!-- Grid column -->
-       
-        </div>
-    <!-- Grid row -->
-    
-      <!-- Grid row -->
-  <div class="form-row">
-        <!-- Grid column -->
-        <div class="col-md-6">
+       <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form">
                     <i class="fas fa-trademark"></i>
@@ -183,8 +178,8 @@
               @endif
          
 </div>
-<!-- Grid column -->
         </div>
+  
     <!-- Grid row -->
     <!-- Grid row -->
   <div class="form-row">

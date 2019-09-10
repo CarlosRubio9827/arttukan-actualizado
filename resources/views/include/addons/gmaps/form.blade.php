@@ -6,7 +6,7 @@
                 <div class="md-form">
                   
                     <input type="hidden" readonly id="infowindow" value="{{$infowindow}}" name="infowindow" class="form-control validate" maxlength="50">               
-                   </div>
+                   </div>  
                 <!-- Material input -->
                 <div class="md-form">
         <i class="fas fa-location-arrow prefix"></i>

@@ -3,7 +3,7 @@
 @include('include.dato_basico.direcciones.form', array('direccion'=>Auth::user()->getCliente()->persona->direccion))
 
 @section('template_title')
-Carrito de productos | {{ config('app.name', 'Laravel') }}
+Carrito de productos | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
@@ -109,11 +109,11 @@ Carrito de productos | {{ config('app.name', 'Laravel') }}
                                         <form id="invoice_form" method="POST" action="{{ route('store.register.venta') }}" accept-charset="UTF-8">
                                             
                                             {{ csrf_field() }}
-
+ 
 
                                         @yield('direccion_form')
 
-                                        @yield('gmaps_form')
+                                        @yield('gmaps_form') 
 
                                         <div class="d-sm-flex justify-content-between mt-4">
                                         

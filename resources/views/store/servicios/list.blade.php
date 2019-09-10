@@ -6,7 +6,7 @@ Lista de servicios | {{ config('app.name', 'Laravel') }}
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
 <style type="text/css">
     body {
-        background: url("{{ asset('img/guest/store/servicio/background.jpg') }}")no-repeat center center;
+        background: url("{{ asset('img/guest/store/servicio/background1.jpg') }}")no-repeat center center fixed;
         background-size: cover;
     }
     </style>

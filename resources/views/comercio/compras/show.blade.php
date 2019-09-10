@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') }}
+Información de la compra #{{ $compra->id }} | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
@@ -137,7 +137,7 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
         </div>
         <div id="container_search_producto">
             </div>
-            <div id="container_search_proveedor">
+        <div id="container_search_proveedor">
             </div>
           
 @endsection
@@ -203,7 +203,7 @@ function eliminar_compra(id){
 }
 
 $(document).ready(function() {
-    reload_datatable();
+    reload_datatable();  
     var url_send = "{{ route('compras.formDetalles',array($compra->id,0)) }}";
     cargar_div(url_send,"GET",{},"form_detalles",true,false);
         });

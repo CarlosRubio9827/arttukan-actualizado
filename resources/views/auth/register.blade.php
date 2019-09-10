@@ -172,7 +172,7 @@ input,.md-form > small,.select2-selection__rendered{
             <div class="white-text">
                 <h1 class="h1-responsive font-weight-bold wow fadeInRight" data-wow-delay="0.3s">¡Inicia Sesion! </h1>
                 <hr class="hr-light wow fadeInRight" data-wow-delay="0.3s">
-                <h6 class="wow fadeInRight" data-wow-delay="0.3s">¿Ya tienes una cuenta?, inicia sesion con tu email y contraseña y empieza a disfrutar de los servicios ofrecidos por IRAPP.</h6>
+                <h6 class="wow fadeInRight" data-wow-delay="0.3s">¿Ya tienes una cuenta?, inicia sesion con tu email y contraseña y empieza a disfrutar de los productos y servicios ofrecidos por Art Tukan.</h6>
                 <br>
                 <a href="{{ route('login') }}" class="btn btn-outline-white wow fadeInRight" data-wow-delay="0.3s"><i class="fas fa-door-closed mr-2"></i>Iniciar sesión</a>
             </div>

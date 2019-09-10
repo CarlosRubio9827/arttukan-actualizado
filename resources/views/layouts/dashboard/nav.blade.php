@@ -56,7 +56,7 @@ function salir(){
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
         <div class="sidebar-brand waves-light">
-            <a href="javascript:void(0)"><i class="fas fa-tools mr-2"></i> ARTTUKAN</a>
+            <a href="javascript:void(0)"><img src="{{ asset('img/arttukan/logofinal2.png') }}" alt=""  width="25" height="25">    ARTTUKAN</a>
             <div id="close-sidebar">
                 <i class="fas fa-lg fa-arrow-circle-left "></i>
             </div>
@@ -108,6 +108,14 @@ function salir(){
                         <span>Página principal</span>
                     </a>
                 </li>
+                @endif
+                @if(Auth::user()->authorizeRoles(['ROLE_CLIENTE'],FALSE))
+
+
+                
+                
+
+
                @endif
                @if(Auth::user()->authorizeRoles('ROLE_ROOT',FALSE))
                 <li class="hoverable waves-light {{ (\Request::is('usuarios') || \Request::is('usuarios/*')) ? 'default' : 'simple' }}">
@@ -127,15 +135,15 @@ function salir(){
                     <div class="sidebar-submenu" style="{{ (\Request::is('tipos_medidas') || \Request::is('tipos_medidas/*') || \Request::is('medidas') || \Request::is('medidas/*')
                      || \Request::is('categorias') || \Request::is('categorias/*') || \Request::is('marcas') || \Request::is('marcas/*')) ? 'display: block;' : '' }} ">
                         <ul>
-                            <li class="hoverable waves-light {{ (\Request::is('tipos_medidas') || \Request::is('tipos_medidas/*')) ? 'default' : 'simple' }}">
+                            {{-- <li class="hoverable waves-light {{ (\Request::is('tipos_medidas') || \Request::is('tipos_medidas/*')) ? 'default' : 'simple' }}">
                             <a href="{{route('tipos_medidas.index')}}"> <i class="fas fa-balance-scale mr-1"></i><span>Tipos de medidas</span></a>
                             </li>
                             <li class="hoverable waves-light {{ (\Request::is('medidas') || \Request::is('medidas/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('medidas.index')}}"><i class="fas fa-ruler mr-1"></i><span>Medidas</span></a>
-                            </li>
+                            </li>--}}
                             <li class="hoverable waves-light {{ (\Request::is('marcas') || \Request::is('marcas/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('marcas.index')}}"> <i class="fas fa-trademark mr-1"></i><span>Marcas</span></a>
-                                </li>
+                                </li> 
                             <li class="hoverable waves-light {{ (\Request::is('categorias') || \Request::is('categorias/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('categorias.index')}}"><i class="fas fa-sitemap mr-1"></i><span>Categorias</span></a>
                             </li>
@@ -173,13 +181,13 @@ function salir(){
                             <li class="hoverable waves-light {{ (\Request::is('clientes') || \Request::is('clientes/*')) ? 'default' : 'simple' }}">
                             <a href="{{route('clientes.index')}}"> <i class="fas fa-user-tie mr-1"></i><span>Clientes</span></a>
                             </li>
-                            <li class="hoverable waves-light {{ (\Request::is('colaboradores') || \Request::is('colaboradores/*')) ? 'default' : 'simple' }}">
+                            {{-- <li class="hoverable waves-light {{ (\Request::is('colaboradores') || \Request::is('colaboradores/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('colaboradores.index')}}"><i class="fas fa-user-cog mr-1"></i><span>Colaboradores</span></a>
                             </li>
                             
                             <li class="hoverable waves-light {{ (\Request::is('proveedores') || \Request::is('proveedores/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('proveedores.index')}}"><i class="fas fa-user-tag mr-1"></i><span>Proveedores</span></a>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </div>

@@ -3,7 +3,7 @@
 @section('persona_form')
 
     <!-- Grid row -->
-    <div class="form-row">
+    <div class="form-row">  
         <!-- Grid column -->
         <div class="col-md-6">
             <!-- Material input -->
@@ -221,6 +221,6 @@
  
 @yield('direccion_form')
 
-    @yield('gmaps_form')
+    {{-- @yield('gmaps_form')  --}}
 
 @endsection

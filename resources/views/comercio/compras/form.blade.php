@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ asset('css/addons/bt4-buttons-datatables.min.css') }}" type="text/css">
 @endsection
 @section('crud_form')
-
+ 
 @if($editar)
 <form id="compra_form" method="POST" action="{{ route('compras.update', $compra->id) }}" accept-charset="UTF-8">
     <input name="_method" type="hidden" value="PUT">
