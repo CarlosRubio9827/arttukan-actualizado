@@ -164,8 +164,8 @@ Información de la solicitud "{{ $solicitud->nombre }}" | {{ config('app.name', 
                                           <th class="th-sm">Servicio
                                           </th>
                           
-                                          <th class="th-sm">Colaborador
-                                          </th>
+                                          {{-- <th class="th-sm">Colaborador
+                                          </th> --}}
                           
                                           <th class="th-sm">Valor unitario
                                           </th>
@@ -186,7 +186,7 @@ Información de la solicitud "{{ $solicitud->nombre }}" | {{ config('app.name', 
                                           <tr class="hoverable">
                                             <td>{{$detalle->id}}</td>
                                             <td>{{$detalle->nombre}}</td>
-                                            @if(Auth::user()->authorizeRoles('ROLE_CLIENTE',FALSE))
+                                            @if(Auth::user()->authorizeRoles(['ROLE_CLIENTE', 'ROLE_ROOT'],FALSE))
                                             <td> 
                                               <span class="h5"><span class="hoverable badge
                                                 @switch($detalle->estado)
@@ -232,14 +232,14 @@ Información de la solicitud "{{ $solicitud->nombre }}" | {{ config('app.name', 
                           
                                           <td>{{$detalle->servicio->nombre}}</td> 
                           
-                                          <td>@if($detalle->colaborador)
+                                          {{-- <td>@if($detalle->colaborador)
                                             {{$detalle->colaborador->persona->primer_nombre}} {{$detalle->colaborador->persona->segundo_nombre}}
                                           @else
                                           <span class="h5"> <span class="hoverable badge black">
                                               <i class="mr-1 fas fa-user-times"></i>Colaborador no asignado 
                                         </span> </span>
                                           @endif
-                                        </td> 
+                                        </td>  --}}
                                           <td> <h5><span class="badge badge-success hoverable">
                                               @money($detalle->valor_unitario)
                                               </span>

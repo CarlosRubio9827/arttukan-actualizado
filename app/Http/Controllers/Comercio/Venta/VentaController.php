@@ -169,7 +169,7 @@ $carbon_fecha = Carbon::parse($venta->fecha_inicio);
         return View::make('comercio.ventas.show')->with(compact('venta'));
         
         }
-
+   
      /**
      * Display the specified resource.
      *
@@ -205,7 +205,7 @@ $carbon_fecha = Carbon::parse($venta->fecha_inicio);
             $venta = Venta::findOrFail($id);
             $venta->estado = "Entregado";
             $venta->save();
-    
+     
                 return Redirect::to('ventas/'.$id);
             }
 

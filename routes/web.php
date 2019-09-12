@@ -28,7 +28,7 @@ Route::delete('/store/cart/productos/{id}', 'StoreController@delete_cart_product
 Route::delete('/store/cart/servicios/{id}', 'StoreController@delete_cart_servicios')->name('store.servicios.cart.delete');
 Route::post('/store/solicitud', 'StoreController@register_solicitud')->name('store.register.solicitud');
 Route::post('/store/venta', 'StoreController@register_venta')->name('store.register.venta');
-
+   
 Route::get('/home/{estado?}', 'HomeController@index')->name('home');
 
 

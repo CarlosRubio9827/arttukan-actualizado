@@ -49,17 +49,17 @@
                       <td>
                 
                         <a href="{{ route('compras.show',$compra->id) }}" class="text-primary m-1" 
-                          data-toggle="tooltip" data-placement="bottom" title='Información de la compra #{{ $compra->id }}'>
+                          data-toggle="tooltip" data-placement="bottom" title='Información de la producción #{{ $compra->id }}'>
                             <i class="fas fa-2x fa-info-circle"></i>
                                   </a>
       
             <a href="{{ route('compras.edit',$compra->id) }}" class="text-warning m-1" 
-                          data-toggle="tooltip" data-placement="bottom" title='Editar la compra #{{ $compra->id }}'>
+                          data-toggle="tooltip" data-placement="bottom" title='Editar la producción #{{ $compra->id }}'>
                             <i class="fas fa-2x fa-pencil-alt"></i>
                                   </a>
       
                                   <a onclick="eliminar_compra({{ $compra->id }})" class="text-danger m-1" 
-                          data-toggle="tooltip" data-placement="bottom" title='Eliminar la compra #{{ $compra->id }}'>
+                          data-toggle="tooltip" data-placement="bottom" title='Eliminar la producción #{{ $compra->id }}'>
                             <i class="fas fa-2x fa-trash-alt"></i>
                                   </a>
                                   <form id="eliminar{{ $compra->id }}" method="POST" action="{{ route('compras.destroy', $compra->id) }}" accept-charset="UTF-8">

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.comercio.compras.div_compras', array('compras'=>$compras))
 @section('template_title')
-Lista de compras | Art Tukan
+Lista de produccion | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">
@@ -22,22 +22,22 @@ Lista de compras | Art Tukan
 
                     <h4 class="mb-2 mb-sm-0 pt-1">
                     <span><i class="fas fa-tags fa-lg mr-1"></i></span> <span> @if ($compras->count() === 1)
-                Una compra
+                Una producción
             @elseif ($compras->count() > 1)
-                {{ $compras->count() }} compras
+                {{ $compras->count() }} producciones
             @else
-               No hay compras
+               No hay producciones
             @endif
             </span>
                     </h4>
 
                     <div class="d-flex justify-content-center">
                     <a href="{{ route('compras.create',array(null)) }}" class="btn btn-outline-success btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title="Registrar una compra">
+                    data-toggle="tooltip" data-placement="bottom" title="Registrar una producción">
                       <i class="fas fa-2x fa-plus"></i>
                             </a>
                             <a href="{{ route('compras.deleted.index',array('Abierta')) }}" class="btn btn-outline-danger btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title="Compras eliminadas">
+                    data-toggle="tooltip" data-placement="bottom" title="Producciones eliminadas">
                       <i class="fas fa-2x fa-recycle"></i>
                             </a>
                     </div>
@@ -47,7 +47,7 @@ Lista de compras | Art Tukan
             </div>
             <!-- Heading -->
 
-         
+          
             @yield('div_compras')
 
           
@@ -75,8 +75,8 @@ Lista de compras | Art Tukan
 
 function eliminar_compra(id){
     swal({
-  title: 'Eliminar la compra',
-  text: '¿Desea eliminar la compra #'+id+'?',
+  title: 'Eliminar la producción',
+  text: '¿Desea eliminar la producción #'+id+'?',
   type: 'question',
   confirmButtonText: '<i class="fas fa-trash-alt"></i> Eliminar',
   cancelButtonText: '<i class="fas fa-times"></i> Cancelar',
@@ -108,7 +108,7 @@ function eliminar_compra(id){
   $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-
+ 
 
 $(document).ready(function() {
     var currentdate = new Date(); 

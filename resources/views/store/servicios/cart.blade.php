@@ -108,9 +108,9 @@ Carrito de servicios | {{ config('app.name', 'Laravel') }}
                                         @if(Auth::user()->getCliente()->servicios->count() > 0)
                                         <form id="invoice_form" method="POST" action="{{ route('store.register.solicitud') }}" accept-charset="UTF-8">
                                             
-                                            {{ csrf_field() }}
+                                            {{ csrf_field() }} 
 <!-- Grid row -->
-<div class="form-row">
+{{-- <div class="form-row">
 
     <!-- Grid column -->
     <div class="col-md-6">
@@ -154,12 +154,12 @@ Carrito de servicios | {{ config('app.name', 'Laravel') }}
 
 <!-- Grid column -->
 
-    </div>
+    </div> --}}
 <!-- Grid row -->
 
                                         @yield('direccion_form')
 
-                                        @yield('gmaps_form')
+                                       {{--@yield('gmaps_form')--}} 
 
                                         <div class="d-sm-flex justify-content-between mt-4">
                                         
@@ -292,7 +292,7 @@ function validar(){
             var nombre = $("#nombre").val();
             swal({
   title: 'Registrar solicitud',
-  text: '¿Desea registrar la solicitud "'+nombre+'"?',
+  text: '¿Desea registrar la solicitud?',
   type: 'success',
   confirmButtonText: '<i class="fas fa-check"></i> Si',
   cancelButtonText: '<i class="fas fa-times"></i> No',

@@ -113,7 +113,7 @@ Carrito de productos | Art Tukan
 
                                         @yield('direccion_form')
 
-                                        @yield('gmaps_form') 
+                                        {{--@yield('gmaps_form')--}} 
 
                                         <div class="d-sm-flex justify-content-between mt-4">
                                         

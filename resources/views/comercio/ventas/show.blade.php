@@ -49,12 +49,12 @@ Información de la venta #{{ $venta->id }} | {{ config('app.name', 'Laravel') }}
                               {{ csrf_field() }}
                           </form>
                     </div>
-                    @elseif($compra->estado == "Abierta")
+                    @elseif($venta->estado == "Abierta"){{----}}
                     <div class="d-flex justify-content-center">
    
                           
-                            <a onclick="cancelar_compra({{ $compra->id }})"  class="btn btn-outline-danger btn-circle waves-effect hoverable" 
-                              data-toggle="tooltip" data-placement="bottom" title='Cancelar la compra #{{ $compra->id }}'>
+                            <a onclick="cancelar_compra({{ $venta->id }})"  class="btn btn-outline-danger btn-circle waves-effect hoverable" 
+                              data-toggle="tooltip" data-placement="bottom" title='Cancelar la compra #{{ $venta->id }}'>
                                 <i class="fas fa-2x fa-calendar-times"></i>
                                       </a>
                           
@@ -62,14 +62,14 @@ Información de la venta #{{ $venta->id }} | {{ config('app.name', 'Laravel') }}
                                         <input name="_method" type="hidden" value="PUT">
                                         {{ csrf_field() }}
                                         </form>
-                    </div>
+                    </div>  
 
-                    @elseif($compra->estado == "Enviado")
+                    @elseif($venta->estado == "Enviado")
                     <div class="d-flex justify-content-center">
    
                           
-                            <a onclick="cancelar_compra({{ $compra->id }})"  class="btn btn-outline-danger btn-circle waves-effect hoverable" 
-                              data-toggle="tooltip" data-placement="bottom" title='Cancelar la compra #{{ $compra->id }}'>
+                            <a onclick="cancelar_compra({{ $venta->id }})"  class="btn btn-outline-danger btn-circle waves-effect hoverable" 
+                              data-toggle="tooltip" data-placement="bottom" title='Cancelar la compra #{{ $venta->id }}'>
                                 <i class="fas fa-2x fa-people-carry"></i>
                                       </a>
                           
@@ -203,8 +203,8 @@ Información de la venta #{{ $venta->id }} | {{ config('app.name', 'Laravel') }}
                                         <th class="th-sm">Producto
                                         </th>
                         
-                                        <th class="th-sm">Proveedor
-                                        </th>
+                                         {{-- <th class="th-sm">Proveedor
+                                        </th>  --}}
                         
                                         <th class="th-sm">Valor unitario
                                         </th>
@@ -231,14 +231,14 @@ Información de la venta #{{ $venta->id }} | {{ config('app.name', 'Laravel') }}
                         
                                         <td>{{$detalle->producto->nombre}}</td> 
                         
-                                        <td>@if($detalle->proveedor)
+                                        {{-- <td>@if($detalle->proveedor)
                                             {{$detalle->proveedor->persona->primer_nombre}} {{$detalle->proveedor->persona->segundo_nombre}}
                                           @else
                                           <span class="h5"> <span class="hoverable badge black">
                                               <i class="mr-1 fas fa-user-times"></i>Proveedor no asignado 
                                         </span> </span>
                                           @endif
-                                        </td> 
+                                        </td> --}}
                         
                                         <td> <h5><span class="badge badge-success hoverable">
                                             @money($detalle->valor_unitario)
@@ -411,8 +411,8 @@ function cancelar_venta(id){
     $(document).ready(function() {
  
 
- var array_responsive = [ 1,3,4,5,6 ];
- var id_priority = 7;
+ var array_responsive = [ 1,3,4,5,5 ];
+ var id_priority = 6;
  
          
      var venta =  "venta #{{$venta->id}}"; 

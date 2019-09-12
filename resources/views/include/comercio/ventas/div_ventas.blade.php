@@ -22,10 +22,10 @@
                             <a class="nav-link z-depth-5" id="pills-calendar-venta-tab" data-toggle="pill" href="#pills-calendar-venta" role="tab" aria-controls="pills-calendar-venta" aria-selected="false">
                                 <h5> <i class="fas fa-calendar-alt mr-2"></i>Calendario</h5></a>
                           </li>
-                          <li class="nav-item hoverable waves-effect mr-2 mt-2" onclick="localDB_Venta('map');">
+                          {{-- <li class="nav-item hoverable waves-effect mr-2 mt-2" onclick="localDB_Venta('map');">
                             <a class="nav-link z-depth-5" id="pills-map-venta-tab" data-toggle="pill" href="#pills-map-venta" role="tab" aria-controls="pills-map-venta" aria-selected="false">
                                 <h5> <i class="fas fa-map-marked-alt mr-2"></i>Mapa</h5></a>
-                          </li>
+                          </li> --}}
                                   <div class="btn-group ">
                                         <button type="button" data-toggle="dropdown" aria-haspopup="true"
                                           aria-expanded="false"
@@ -86,13 +86,13 @@ fa-dolly
                                                        far fa-calendar-times  red-text
                                                     @break
                                                     @case('Entregado')
-fas fa-people-carry teal-text
-@break
-@case('Enviado')
-fas fa-dolly cyan-text-d
-@break
+                                                        fas fa-people-carry teal-text
+                                                    @break
+                                                    @case('Enviado')
+                                                        fas fa-dolly cyan-text-d
+                                                    @break
                                                     @default
-                                                       fas fa-stopwatch orange-text
+                                                        fas fa-stopwatch orange-text
                                                     @endswitch
                                                         "></i>
                                                     {{($item == 'Abierta') ? 'Aprobado' : $item }}</button>
@@ -205,7 +205,7 @@ fas fa-dolly cyan-text-d
                 <a target="_blank" href="{{ route('ventas.show', $venta->id) }}" class="text-primary m-1" 
                                     data-toggle="tooltip" data-placement="bottom" title='Información de la venta #{{ $venta->id }}'>
                                       <i class="fas fa-2x fa-info-circle"></i>
-                                            </a>
+                                            </a> 
                   @if($venta->estado == 'Pendiente')
                
                                             <a onclick="cancelar_venta({{ $venta->id }})" class="text-danger m-1" 
@@ -213,7 +213,7 @@ fas fa-dolly cyan-text-d
                                       <i class="far fa-2x fa-calendar-times"></i>
                                             </a>
                                            
-                                            <form id="cancelar{{ $venta->id }}" method="POST" action="{{ route('ventas.cancel', $venta->id) }}" accept-charset="UTF-8">
+                <form id="cancelar{{ $venta->id }}" method="POST" action="{{ route('ventas.cancel', $venta->id) }}" accept-charset="UTF-8">
                     <input name="_method" type="hidden" value="PUT">
                     {{ csrf_field() }}
                 </form>
@@ -224,7 +224,7 @@ fas fa-dolly cyan-text-d
                <a onclick="enviar_venta({{ $venta->id }})" class="cyan-text-d m-1" 
        data-toggle="tooltip" data-placement="bottom" title='Enviar la venta #{{ $venta->id }}'>
          <i class="fas fa-2x fa-dolly"></i>
-               </a>
+               </a> 
               
                <form id="enviar{{ $venta->id }}" method="POST" action="{{ route('ventas.send', $venta->id) }}" accept-charset="UTF-8">
 <input name="_method" type="hidden" value="PUT">

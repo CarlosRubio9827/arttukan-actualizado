@@ -54,8 +54,8 @@ class StoreController extends Controller
         $rules = array(
             'barrio'                   => 'required|max:50',
         'direccion'                   => 'required|max:50',
-        'latitud'                   => 'required|max:50',
-        'longitud'                   => 'required|max:50',
+        //'latitud'                   => 'required|max:50',
+        //'longitud'                   => 'required|max:50',
         'ciudad_id'              => 'required'
     );
 
@@ -72,8 +72,8 @@ class StoreController extends Controller
         $direccion = new Direccion;
         $cliente = Auth::user()->getCliente();
         $ciudad = Ciudad::findOrFail($request->ciudad_id);
-        $ubicacion->latitud = $request->latitud;
-        $ubicacion->longitud = $request->longitud;
+        $ubicacion->latitud = "3.5221006057596975";
+        $ubicacion->longitud = "-76.29353920932567";
         $ubicacion->save();          
         $venta->fecha = Carbon::now();
             $venta->estado = "Pendiente";
@@ -112,13 +112,13 @@ class StoreController extends Controller
         if(Auth::user()){
         Auth::user()->authorizeRoles('ROLE_CLIENTE',TRUE);
         $rules = array(
-            'nombre'                   => 'required|max:50',
+            //'nombre'                   => 'required|max:50',
             'barrio'                   => 'required|max:50',
         'direccion'                   => 'required|max:50',
-        'latitud'                   => 'required|max:50',
-        'longitud'                   => 'required|max:50',
+        //'latitud'                   => 'required|max:50',
+        //'longitud'                   => 'required|max:50',
         'ciudad_id'              => 'required',
-        'fecha_inicio'                   => 'required|date'
+        //'fecha_inicio'                   => 'required|date'
     );
 
     $validator = Validator::make($request->all(), $rules);
@@ -134,12 +134,12 @@ class StoreController extends Controller
         $direccion = new Direccion;
         $cliente = Auth::user()->getCliente();
         $ciudad = Ciudad::findOrFail($request->ciudad_id);
-        $ubicacion->latitud = $request->latitud;
-        $ubicacion->longitud = $request->longitud;
+        $ubicacion->latitud = "3.5221006057596975";
+        $ubicacion->longitud = "-76.29353920932567";
         $ubicacion->save();        
-        $solicitud->nombre = $request->nombre;   
-        $solicitud->fecha_inicio = $request->fecha_inicio;
-            $solicitud->estado = "Pendiente";
+        $solicitud->nombre = "Solicitud de Servicio";   
+        $solicitud->fecha_inicio = Carbon::now();
+        $solicitud->estado = "Pendiente";
        
 
         $solicitud->cliente()->associate($cliente);

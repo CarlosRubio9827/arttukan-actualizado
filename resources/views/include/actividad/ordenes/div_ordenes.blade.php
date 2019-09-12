@@ -21,12 +21,12 @@
                               <a class="nav-link z-depth-5" id="pills-calendar-orden-tab" data-toggle="pill" href="#pills-calendar-orden" role="tab" aria-controls="pills-calendar-orden" aria-selected="false">
                                   <h5> <i class="fas fa-calendar-alt mr-2"></i>Calendario</h5></a>
                             </li>
-                            @if(Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR','ROLE_COLABORADOR'],FALSE))
+                            {{-- @if(Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR','ROLE_COLABORADOR'],FALSE))
                             <li class="nav-item hoverable waves-effect mr-2 mt-2" onclick="localDB_Orden('map');">
                                     <a class="nav-link z-depth-5" id="pills-map-orden-tab" data-toggle="pill" href="#pills-map-orden" role="tab" aria-controls="pills-map-orden" aria-selected="false">
                                         <h5> <i class="fas fa-map-marked-alt mr-2"></i>Mapa</h5></a>
                                   </li>
-                                  @endif
+                                  @endif --}}
                              
                                   <div class="btn-group ">
                                         <button type="button" data-toggle="dropdown" aria-haspopup="true"

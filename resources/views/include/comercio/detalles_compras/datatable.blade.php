@@ -24,8 +24,8 @@ No hay detalles de compra #{{$compra->id}}
                 <th class="th-sm">Producto
                 </th>
 
-                <th class="th-sm">Proveedor
-                </th>
+                {{-- <th class="th-sm">Proveedor
+                </th> --}}
 
                 <th class="th-sm">Valor unitario
                 </th>
@@ -53,14 +53,14 @@ No hay detalles de compra #{{$compra->id}}
 
                 <td>{{$detalle->producto->nombre}}</td> 
 
-                <td>@if($detalle->proveedor)
+                {{-- <td>@if($detalle->proveedor)
                     {{$detalle->proveedor->persona->primer_nombre}} {{$detalle->proveedor->persona->segundo_nombre}}
                   @else
                   <span class="h5"> <span class="hoverable badge black">
                       <i class="mr-1 fas fa-user-times"></i>Proveedor no asignado 
                 </span> </span>
                   @endif
-                </td> 
+                </td>  --}}
 
                 <td> <h5><span class="badge badge-success hoverable">
                     @money($detalle->valor_unitario)

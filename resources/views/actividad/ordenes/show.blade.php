@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información de la orden "{{ $orden->nombre }}" | {{ config('app.name', 'Laravel') }}
+Información de la orden "{{ $orden->nombre }}" | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>

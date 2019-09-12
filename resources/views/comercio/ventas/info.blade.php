@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') }}
+Información de la compra #{{ $compra->id }} | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">
@@ -125,7 +125,7 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
           @case('Enviado')
           fa-dolly
           @break
-          @default
+          @default  
               fa-stopwatch 
           @endswitch
               "></i>{{ ($compra->estado == "Abierta") ? "Aprobado" : $compra->estado }}</span></span>
@@ -143,7 +143,7 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
   <a class="list-group-item waves-effect hoverable"><strong>Cliente: </strong>{{$compra->cliente->persona->primer_nombre}} {{$compra->cliente->persona->segundo_nombre}} {{$compra->cliente->persona->primer_apellido}} {{$compra->cliente->persona->segundo_apellido}}</a>
   <a class="list-group-item waves-effect hoverable"><strong>Ciudad: </strong>{{ $compra->direccion->ciudad->nombre }}</a>
   <a class="list-group-item waves-effect hoverable"><strong>Barrio: </strong>{{ $compra->direccion->barrio }}</a>
-  <a class="list-group-item waves-effect hoverable"><strong>Direccion: </strong>{{ $compra->direccion->direccion }}</a>
+  <a class="list-group-item waves-effect hoverable"><strong>Dirección: </strong>{{ $compra->direccion->direccion }}</a>
 </div>
                         </div>
 
@@ -193,8 +193,8 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
                                         <th class="th-sm">Producto
                                         </th>
                         
-                                        <th class="th-sm">Proveedor
-                                        </th>
+                                        {{-- <th class="th-sm">Proveedor
+                                        </th> --}}
                         
                                         <th class="th-sm">Valor unitario
                                         </th>
@@ -221,14 +221,14 @@ Información de la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') 
                         
                                         <td>{{$detalle->producto->nombre}}</td> 
                         
-                                        <td>@if($detalle->proveedor)
+                                        {{-- <td>@if($detalle->proveedor)
                                             {{$detalle->proveedor->persona->primer_nombre}} {{$detalle->proveedor->persona->segundo_nombre}}
                                           @else
                                           <span class="h5"> <span class="hoverable badge black">
                                               <i class="mr-1 fas fa-user-times"></i>Proveedor no asignado 
                                         </span> </span>
                                           @endif
-                                        </td> 
+                                        </td>  --}}
                         
                                         <td> <h5><span class="badge badge-success hoverable">
                                             @money($detalle->valor_unitario)
@@ -382,8 +382,8 @@ function pagar_compra(id,pay){
     $(document).ready(function() {
  
 
- var array_responsive = [ 1,3,4,5,6 ];
- var id_priority = 7;
+ var array_responsive = [ 1,3,4,5 ];
+ var id_priority = 6;
  
          
      var compra =  "compra #{{$compra->id}}"; 

@@ -109,14 +109,7 @@ function salir(){
                     </a>
                 </li>
                 @endif
-                @if(Auth::user()->authorizeRoles(['ROLE_CLIENTE'],FALSE))
-
-
-                
-                
-
-
-               @endif
+               
                @if(Auth::user()->authorizeRoles('ROLE_ROOT',FALSE))
                 <li class="hoverable waves-light {{ (\Request::is('usuarios') || \Request::is('usuarios/*')) ? 'default' : 'simple' }}">
                     <a href="{{route('usuarios.index')}}">
@@ -162,7 +155,7 @@ function salir(){
                                 <a href="{{route('productos.index')}}"><i class="fas fa-box-open mr-1"></i><span>Productos</span></a>
                             </li>
                             <li class="hoverable waves-light {{ (\Request::is('compras') || \Request::is('compras/*')) ? 'default' : 'simple' }}">
-                                <a href="{{route('compras.index')}}"><i class="fas fa-tags mr-1"></i><span>Compras</span></a>
+                                <a href="{{route('compras.index')}}"><i class="fas fa-tags mr-1"></i><span>Producciones</span></a>
                             </li>
                             <li class="hoverable waves-light {{ (\Request::is('ventas') || \Request::is('ventas/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('ventas.index',array('Abierta'))}}"><i class="fas fa-receipt mr-1"></i><span>Ventas</span></a>
@@ -203,15 +196,61 @@ function salir(){
                             <li class="hoverable waves-light {{ (\Request::is('servicios') || \Request::is('servicios/*')) ? 'default' : 'simple' }}">
                             <a href="{{route('servicios.index')}}"> <i class="fas fa-cogs mr-1"></i><span>Servicios</span></a>
                             </li>
-                            <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
+                            {{-- <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('ordenes.index',array('Abierta'))}}"><i class="fas fa-toolbox mr-1"></i><span>Ordenes</span></a>
-                            </li>
+                            </li> --}}
                             <li class="hoverable waves-light {{ (\Request::is('solicitudes') || \Request::is('solicitudes/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('solicitudes.index',array('Pendiente'))}}"><i class="fas fa-business-time mr-1"></i><span>Solicitudes</span></a>
                             </li>
                         </ul>
                     </div>
                 </li>
+
+                {{-- Tienda--}}
+
+                <li class="sidebar-dropdown {{ (\Request::is('servicios') || \Request::is('servicios/*') || \Request::is('ordenes') || \Request::is('ordenes/*')) ? 'active default' : 'simple' }}">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-store"></i>
+                        <span>Mi Tienda</span>
+                    </a>
+                    <div class="sidebar-submenu" style="{{ (\Request::is('servicios') || \Request::is('servicios/*') || \Request::is('ordenes') || \Request::is('ordenes/*') || \Request::is('solicitudes') || \Request::is('solicitudes/*')) ? 'display: block;' : '' }} ">
+                        <ul>
+                            <li class="hoverable waves-light {{ (\Request::is('servicios') || \Request::is('servicios/*')) ? 'default' : 'simple' }}">
+                            <a href="{{ route('store.productos') }}"> <i class="fas fa fa-box-open mr-1"></i><span>Productos</span></a>
+                            </li>
+                            <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
+                                <a href="{{ route('store.servicios') }}"><i class="fas fa fa-cogs mr-1"></i><span>Servicios</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                {{-- Fin Tienda--}}
+
+                @endif
+
+                @if(Auth::user()->authorizeRoles(['ROLE_CLIENTE'],FALSE))
+                <li class="sidebar-dropdown {{ (\Request::is('servicios') || \Request::is('servicios/*') || \Request::is('ordenes') || \Request::is('ordenes/*')) ? 'active default' : 'simple' }}">
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-store"></i>
+                        <span>Tienda</span>
+                    </a>
+                    <div class="sidebar-submenu" style="{{ (\Request::is('servicios') || \Request::is('servicios/*') || \Request::is('ordenes') || \Request::is('ordenes/*') || \Request::is('solicitudes') || \Request::is('solicitudes/*')) ? 'display: block;' : '' }} ">
+                        <ul>
+                            <li class="hoverable waves-light {{ (\Request::is('servicios') || \Request::is('servicios/*')) ? 'default' : 'simple' }}">
+                            <a href="{{ route('store.productos') }}"> <i class="fas fa fa-box-open mr-1"></i><span>Productos</span></a>
+                            </li>
+                            <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
+                                <a href="{{ route('store.servicios') }}"><i class="fas fa fa-cogs mr-1"></i><span>Servicios</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                
+                
+
+
                 @endif
             </ul>
         </div>
@@ -219,7 +258,7 @@ function salir(){
     </div>
     <!-- sidebar-content  -->
     <div class="sidebar-footer">
-            <div class="dropdown">
+            {{-- <div class="dropdown">
                     <a href="javascript:void(0)" class="" id="dropdownMenuMessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-store"></i>
                     </a>
@@ -261,7 +300,7 @@ function salir(){
                         <div class="dropdown-divider"></div>
                    
                     </div>
-                </div>
+                </div> --}}
         <div class="dropdown">
 
             <a href="javascript:void(0)" class="" id="dropdownMenuNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
