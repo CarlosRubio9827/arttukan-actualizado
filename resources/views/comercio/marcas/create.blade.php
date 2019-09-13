@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.marcas.form')
 @section('template_title')
-Registrar una marca | {{ config('app.name', 'Laravel') }}
+Registrar una marca | Art Tukan
 @endsection
 @section('content')
 

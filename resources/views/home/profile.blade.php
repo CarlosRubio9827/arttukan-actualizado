@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Perfil de "{{ (Auth::user()->getPersona()->primer_nombre && Auth::user()->getPersona()->primer_apellido) ? Auth::user()->getPersona()->primer_nombre .' '. Auth::user()->getPersona()->primer_apellido : Auth::user()->name }}" | {{ config('app.name', 'Laravel') }}
+Perfil de "{{ (Auth::user()->getPersona()->primer_nombre && Auth::user()->getPersona()->primer_apellido) ? Auth::user()->getPersona()->primer_nombre .' '. Auth::user()->getPersona()->primer_apellido : Auth::user()->name }}" | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/dashboard/profile-img.css') }}" type="text/css">

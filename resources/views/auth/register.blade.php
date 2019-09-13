@@ -1,7 +1,7 @@
 @include('include.contacto.personas.form', array('persona'=>$cliente->persona))
 @extends('layouts.store.main')
 @section('template_title')
-Registrarse | ArtTukan
+Registrarse | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">

@@ -3,7 +3,7 @@
 @include('include.dato_basico.direcciones.form', array('direccion'=>Auth::user()->getCliente()->persona->direccion))
 
 @section('template_title')
-Carrito de servicios | {{ config('app.name', 'Laravel') }}
+Carrito de servicios | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>

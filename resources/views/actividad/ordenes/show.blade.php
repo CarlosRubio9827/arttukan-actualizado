@@ -142,7 +142,7 @@ Información de la orden "{{ $orden->nombre }}" | Art Tukan
               <!--Grid row-->
               <div class="row mt-5">
 
-                <!--Grid column-->
+                <!--Grid column--> 
                 <div class="col-12">
 
                     <!--Card-->
@@ -251,7 +251,7 @@ function eliminar_orden(id,nombre){
   timer: 3000
 })
   }
-})
+}) 
 }
 
 $(document).ready(function() {

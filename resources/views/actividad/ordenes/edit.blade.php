@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('actividad.ordenes.form')
 @section('template_title')
-Editar la orden "{{ $orden->nombre }}" | {{ config('app.name', 'Laravel') }}
+Editar la orden "{{ $orden->nombre }}" | Art Tukan
 @endsection
 @section('content')
 

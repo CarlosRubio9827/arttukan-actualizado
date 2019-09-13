@@ -60,7 +60,7 @@
 <div class="form-row">
 
         <!-- Grid column -->
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <!-- Material input -->
             <div class="md-form">
     <i class="fas fa-toolbox prefix"></i>
@@ -76,12 +76,12 @@
 </div>
                                 
                                 @endif
-        </div>
+        </div> --}}
     
         <!-- Grid column -->
      
   <!-- Grid column -->
-  <div class="col-md-6">
+  <div class="col-md-12">
     <!-- Material input -->
     <div class="md-form">
 <i class="prefix far fa-calendar-alt"></i>
@@ -185,7 +185,7 @@
   
   @yield('direccion_form')
 
-  @yield('gmaps_form')
+  {{-- @yield('gmaps_form') --}}
 
     <a onclick="validar()" class="mt-4 waves-effect btn {{($editar) ? 'btn-warning' : 'btn-success'}} btn-md hoverable">
     <i class="fas fa-2x {{($editar) ? 'fa-pencil-alt' : 'fa-plus'}}"></i> {{($editar) ? 'Editar' : 'Registrar'}}

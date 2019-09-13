@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información del servicio "{{ $servicio->nombre }}" | {{ config('app.name', 'Laravel') }}
+Información del servicio "{{ $servicio->nombre }}" | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/dropzone.css') }}" type="text/css">

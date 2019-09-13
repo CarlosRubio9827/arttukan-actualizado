@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Compras eliminadas | {{ config('app.name', 'Laravel') }}
+Producciones eliminadas | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">
@@ -23,14 +23,14 @@ Compras eliminadas | {{ config('app.name', 'Laravel') }}
   <i class="fas fa-tags fa-stack-1x fa-lg"></i>
    <i class="fas fa-ban fa-stack-1x fa-2x text-danger"></i>
 </span>
-                    <a href="{{ route('compras.index') }}">Lista de compras</a>
+                    <a href="{{ route('compras.index') }}">Lista de producciones</a>
                         <span>/</span>
                         <span> @if ($compras->count() === 1)
-                Una compra eliminada
+                Una producción eliminada
             @elseif ($compras->count() > 1)
-                {{ $compras->count() }} compras eliminadas
+                {{ $compras->count() }} producciones eliminadas
             @else
-               No hay compras eliminadas
+               No hay producciones eliminadas
             @endif
             </span>
                     </h4>

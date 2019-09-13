@@ -31,7 +31,7 @@
         <input id="edit_url_form" name="edit_url_form" type="hidden" value="{{ route('ordenes.updateDetalles',array($detalle->id)) }}" >
         <input name="_method" type="hidden" value="PUT">
         @else
-<h4><i class="far fa-calendar-plus mr-2"></i> Agregar detalle</h4>
+<h4><i class="far fa-calendar-plus mr-2"></i> Agregar detalles</h4>
 <hr/>
 <form id="detailForm" method="POST" action="{{ route('ordenes.addDetalles') }}" accept-charset="UTF-8">
 <input id="orden_id" name="orden_id" type="hidden" value="{{ $orden->id }}" >
@@ -39,12 +39,12 @@
 @endif
 {{ csrf_field() }}
 
-
+ 
 <!-- Grid row -->
 <div class="form-row">
 
 <!-- Grid column -->
-<div class="col-md-6">
+{{-- <div class="col-md-6">
 
 <!-- Material input -->
 <div class="md-form">
@@ -53,7 +53,7 @@
 <label for="{{$prefix}}nombre" data-error="Error" data-success="Correcto">Nombre *</label>
 </div>
 
-</div>
+</div> --}}
 
 <!-- Grid column -->
 
@@ -83,7 +83,20 @@
                   @endif
 </div>
 <!-- Grid column -->
-
+<div class="col-md-6">
+    <!-- Material input -->
+    
+    <div class="md-form">
+    <i class="fas fa-cogs"></i>
+    <small for="{{$prefix}}servicio_id">Servicios *</small>   
+    <select class="form-control" required id="{{$prefix}}servicio_id" name="{{$prefix}}servicio_id">
+    <option value="" disabled selected>Selecciona una opción</option>
+    @if($editar)
+    <option selected value="{{ $detalle->servicio->id }}">{{$detalle->servicio->nombre}}</option>
+    @endif
+    </select>
+    </div> 
+    </div>
     </div>
 <!-- Grid row -->
 
@@ -124,25 +137,11 @@
 <!-- Grid row -->
 <div class="form-row">
 
-<!-- Grid column -->
-<div class="col-md-6">
-<!-- Material input -->
-
-<div class="md-form">
-<i class="fas fa-cogs"></i>
-<small for="{{$prefix}}servicio_id">Servicio *</small>   
-<select class="form-control" required id="{{$prefix}}servicio_id" name="{{$prefix}}servicio_id">
-<option value="" disabled selected>Selecciona una opción</option>
-@if($editar)
-<option selected value="{{ $detalle->servicio->id }}">{{$detalle->servicio->nombre}}</option>
-@endif
-</select>
-</div> 
-</div>
+   
 <!-- Grid column -->
 
 <!-- Grid column -->
-<div class="col-md-6">
+{{-- <div class="col-md-6">
 <!-- Material input -->
 
 <div class="md-form">
@@ -155,7 +154,7 @@
 @endif
 </select>
 </div> 
-</div>
+</div> --}}
 <!-- Grid column -->
 
 </div>

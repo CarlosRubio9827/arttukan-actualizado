@@ -1,11 +1,11 @@
 <div class="d-sm-flex justify-content-between">
     <h4><i class="fas fa-tasks mr-2"></i>
     @if ($compra->detalles->count() === 1)
-Un detalle de compra #{{$compra->id}}
+Un detalle de producción #{{$compra->id}}
 @elseif ($compra->detalles->count() > 1)
-{{ $compra->detalles->count() }} detalles de compra #{{$compra->id}}
+{{ $compra->detalles->count() }} detalles de producción #{{$compra->id}}
 @else
-No hay detalles de compra #{{$compra->id}}
+No hay detalles de producción #{{$compra->id}}
 @endif
 </h4>
 </div>

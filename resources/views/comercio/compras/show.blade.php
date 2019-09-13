@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información de la compra #{{ $compra->id }} | Art Tukan
+Información de la producción #{{ $compra->id }} | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>
@@ -21,24 +21,24 @@ Información de la compra #{{ $compra->id }} | Art Tukan
 
                     <h4 class="mb-2 mb-sm-0 pt-1">
                     <span><i class="fas fa-tags mr-1"></i></span>
-                        <a href="{{ route('compras.index') }}">Lista de compras</a>
+                        <a href="{{ route('compras.index') }}">Lista de producciones</a>
                         <span>/</span>
-                        <span>Información de la compra #{{ $compra->id }}</span>
+                        <span>Información de la producción #{{ $compra->id }}</span>
                     </h4>
                     
                     <div class="d-flex justify-content-center">
                     <a href="{{ route('compras.index') }}" class="btn btn-outline-secondary btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title="Lista de compras">
+                    data-toggle="tooltip" data-placement="bottom" title="Lista de producciones">
                       <i class="fas fa-2x fa-tags"></i>
                             </a>
 
                              <a href="{{ route('compras.edit', $compra->id) }}" class="btn btn-outline-warning btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title='Editar la compra #{{ $compra->id }}'>
+                    data-toggle="tooltip" data-placement="bottom" title='Editar la producción #{{ $compra->id }}'>
                       <i class="fas fa-2x fa-pencil-alt"></i>
                             </a>
 
                                     <a onclick="eliminar_compra({{ $compra->id }})"  class="btn btn-outline-danger btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title='Eliminar la compra #{{ $compra->id }}'>
+                    data-toggle="tooltip" data-placement="bottom" title='Eliminar la producción #{{ $compra->id }}'>
                       <i class="fas fa-2x fa-trash-alt"></i>
                             </a>
                             <form id="eliminar{{ $compra->id }}" method="POST" action="{{ route('compras.destroy', $compra->id) }}" accept-charset="UTF-8">
@@ -121,7 +121,7 @@ Información de la compra #{{ $compra->id }} | Art Tukan
                         <!--Card content-->
                           <div id="container_datatable_detalle" class="card-body">
                               
-                              </div>
+                          </div>
                     </div>
                     <!--/.Card-->
 
@@ -172,8 +172,8 @@ function reload_datatable(){
 
 function eliminar_compra(id){
     swal({
-  title: 'Eliminar la compra',
-  text: '¿Desea eliminar la compra #'+id+'?',
+  title: 'Eliminar la producción',
+  text: '¿Desea eliminar la producción #'+id+'?',
   type: 'question',
   confirmButtonText: '<i class="fas fa-trash-alt"></i> Eliminar',
   cancelButtonText: '<i class="fas fa-times"></i> Cancelar',

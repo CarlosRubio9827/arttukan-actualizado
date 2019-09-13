@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.comercio.compras.div_compras', array('compras'=>$compras))
 @section('template_title')
-Lista de produccion | Art Tukan
+Lista de producciones | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">
@@ -47,7 +47,7 @@ Lista de produccion | Art Tukan
             </div>
             <!-- Heading -->
 
-          
+           
             @yield('div_compras')
 
           

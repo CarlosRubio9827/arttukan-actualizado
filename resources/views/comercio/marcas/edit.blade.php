@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.marcas.form')
 @section('template_title')
-Editar la marca "{{ $marca->nombre }}" | {{ config('app.name', 'Laravel') }}
+Editar la marca "{{ $marca->nombre }}" | Art Tukan
 @endsection
 @section('content')
 

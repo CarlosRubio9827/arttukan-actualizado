@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información del producto "{{ $producto->nombre }}" | {{ config('app.name', 'Laravel') }}
+Información del producto "{{ $producto->nombre }}" | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/dropzone.css') }}" type="text/css">

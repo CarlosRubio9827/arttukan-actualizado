@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('actividad.ordenes.form')
 @section('template_title')
-Registrar una orden | {{ config('app.name', 'Laravel') }}
+Registrar una orden | Art Tukan
 @endsection
 @section('content')
 
@@ -46,7 +46,7 @@ Registrar una orden | {{ config('app.name', 'Laravel') }}
                         <div class="card-body">
 
                           <!-- Extended material form grid -->
-@yield('crud_form')
+@yield('crud_form')       
 <!-- Extended material form grid -->
 
                         </div>

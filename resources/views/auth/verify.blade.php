@@ -1,6 +1,6 @@
 @extends('layouts.guest.main')
 @section('template_title')
-Bienvenido | {{ config('app.name', 'Laravel') }}
+Bienvenido | Art Tukan
 @endsection
 @section('css_links')
 <style type="text/css">

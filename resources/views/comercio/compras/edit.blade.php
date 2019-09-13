@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.compras.form')
 @section('template_title')
-Editar la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') }}
+Editar la producción #{{ $compra->id }} | Art Tukan
 @endsection
 @section('content')
 
@@ -15,19 +15,19 @@ Editar la compra #{{ $compra->id }} | {{ config('app.name', 'Laravel') }}
 
                     <h4 class="mb-2 mb-sm-0 pt-1">
                     <span><i class="fas fa-tags mr-1 fa-lg"></i></span> 
-                        <a href="{{ route('compras.index') }}">Lista de compras</a>
+                        <a href="{{ route('compras.index') }}">Lista de producciones</a>
                         <span>/</span>
-                        <span>Editar la compra #{{ $compra->id }}</span>
+                        <span>Editar la producción #{{ $compra->id }}</span>
                     </h4>
 
                     <div class="d-flex justify-content-center">
                     <a href="{{ route('compras.index') }}" class="btn btn-outline-secondary btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title="Lista de compras">
+                    data-toggle="tooltip" data-placement="bottom" title="Lista de producciones">
                       <i class="fas fa-2x fa-tags "></i>
                             </a>
 
                             <a href="{{ route('compras.show', $compra->id) }}" class="btn btn-outline-primary btn-circle waves-effect hoverable" 
-                    data-toggle="tooltip" data-placement="bottom" title='Informacion de la compra #{{ $compra->id }}'>
+                    data-toggle="tooltip" data-placement="bottom" title='Informacion de la producción #{{ $compra->id }}'>
                       <i class="fas fa-2x fa-info"></i>
                             </a>
                     </div>

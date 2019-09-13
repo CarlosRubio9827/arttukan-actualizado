@@ -1,6 +1,6 @@
 @extends('layouts.guest.main')
 @section('template_title')
-Iniciar sesión | ArtTukan
+Iniciar sesión | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">
@@ -87,7 +87,7 @@ tbody{
                                 </div>
                                            <div class="center-div-link text-center text-md-left  col-md-6 col-xl-5 offset-xl-1">
                                                 <div class="text-center">
-                                                        <h3 class="white-text"><i class="fas fa-users mr-2"></i>Usuarios</h3>
+                                                        <h3 class="white-text"><i class="fas fa-users mr-2"></i>Usuarios de Prueba</h3>
                                                         <hr class="hr-light">
                                                     </div>
                                             <div class="table-responsive">
@@ -108,8 +108,8 @@ tbody{
                                   <td>root1234</td>
                                 </tr>
                                 <tr class="hoverable">
-                                        <td>administrador@example.com</td>
-                                        <td>administrador</td>
+                                        <td>cliente@example.com</td>
+                                        <td>cliente1234</td>
                                       </tr>
                               </tbody>
                             </table>

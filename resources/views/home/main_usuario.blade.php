@@ -28,7 +28,7 @@ Página principal | Art Tukan
         <!--Card content-->
         <div class="card-body d-sm-flex justify-content-between">
 <div class="tabs">
-  
+  {{--Care loco--}}
         <div class="tab-2" data-toggle="tooltip" data-placement="bottom" title="Tienda">
           <label for="tab2-1" class="waves-effect"><i class="fas fa-store"></i> Tienda</label>
           <input id="tab2-1" name="tabs-two" type="radio" {{($estado && ($estado == "Enviado" || $estado == "Entregado")) ? '' :'checked'}}>
@@ -103,6 +103,37 @@ Página principal | Art Tukan
                   </div>
                   </div>
         </div>
+  
+    <div class="tab-2" data-toggle="tooltip" data-placement="bottom" title="Lista de ordenes">
+        <label for="tab2-1" class="waves-effect"><i class="fas fa-toolbox fa-lg mr-1"></i> Ordenes</label>
+        <input id="tab2-1" name="tabs-two" type="radio" {{($estado && ($estado == "Enviado" || $estado == "Entregado")) ? '' :'checked'}}>
+        <div>
+          <!-- Heading -->
+          <div class="card mb-4 wow fadeIn hoverable">
+
+                  <!--Card content-->
+                  <div class="card-body d-sm-flex justify-content-between">
+      
+                      <h4 class="mb-2 mb-sm-0 pt-1">
+                      <span><i class="fas fa-toolbox fa-lg mr-1"></i></span> <span> @if ($ordenes->count() === 1)
+                  Una orden de "{{ (Auth::user()->getPersona()->primer_nombre && Auth::user()->getPersona()->primer_apellido) ? Auth::user()->getPersona()->primer_nombre .' '. Auth::user()->getPersona()->primer_apellido : Auth::user()->name }}"
+              @elseif ($ordenes->count() > 1)
+                  {{ $ordenes->count() }} ordenes de "{{ (Auth::user()->getPersona()->primer_nombre && Auth::user()->getPersona()->primer_apellido) ? Auth::user()->getPersona()->primer_nombre .' '. Auth::user()->getPersona()->primer_apellido : Auth::user()->name }}"
+              @else
+                 No hay ordenes de "{{ (Auth::user()->getPersona()->primer_nombre && Auth::user()->getPersona()->primer_apellido) ? Auth::user()->getPersona()->primer_nombre .' '. Auth::user()->getPersona()->primer_apellido : Auth::user()->name }}"
+              @endif
+              </span>
+                      </h4>
+      
+                  </div>
+      
+              </div>
+              <div class="container-fluid">
+                  @yield('div_ordenes')
+                </div>
+                </div>
+      </div>
+
         <div class="tab-2"  data-toggle="tooltip" data-placement="bottom" title="Lista de solicitudes">
           <label for="tab2-2" class="waves-effect"><i class="fas fa-business-time fa-lg mr-1"></i> Solicitudes</label>
           <input id="tab2-2" name="tabs-two" type="radio">

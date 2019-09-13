@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.main')
 @section('template_title')
-Información de la marca "{{ $marca->nombre }}" | {{ config('app.name', 'Laravel') }}
+Información de la marca "{{ $marca->nombre }}" | Art Tukan
 @endsection
 @section('content')
         <div class="container-fluid">

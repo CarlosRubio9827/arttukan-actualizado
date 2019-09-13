@@ -1,6 +1,6 @@
 @extends('layouts.guest.main')
 @section('template_title')
-Reestablecer contraseña | {{ config('app.name', 'Laravel') }}
+Reestablecer contraseña | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">

@@ -196,9 +196,9 @@ function salir(){
                             <li class="hoverable waves-light {{ (\Request::is('servicios') || \Request::is('servicios/*')) ? 'default' : 'simple' }}">
                             <a href="{{route('servicios.index')}}"> <i class="fas fa-cogs mr-1"></i><span>Servicios</span></a>
                             </li>
-                            {{-- <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
+                             <li class="hoverable waves-light {{ (\Request::is('ordenes') || \Request::is('ordenes/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('ordenes.index',array('Abierta'))}}"><i class="fas fa-toolbox mr-1"></i><span>Ordenes</span></a>
-                            </li> --}}
+                            </li> 
                             <li class="hoverable waves-light {{ (\Request::is('solicitudes') || \Request::is('solicitudes/*')) ? 'default' : 'simple' }}">
                                 <a href="{{route('solicitudes.index',array('Pendiente'))}}"><i class="fas fa-business-time mr-1"></i><span>Solicitudes</span></a>
                             </li>

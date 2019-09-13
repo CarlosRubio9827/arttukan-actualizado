@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.ventas.form')
 @section('template_title')
-Registrar una venta | {{ config('app.name', 'Laravel') }}
+Registrar una venta | Art Tukan
 @endsection
 @section('content')
 

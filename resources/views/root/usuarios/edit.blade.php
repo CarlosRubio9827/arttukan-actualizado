@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('root.usuarios.form')
 @section('template_title')
-Editar el usuario "{{ $usuario->name }}" | {{ config('app.name', 'Laravel') }}
+Editar el usuario "{{ $usuario->name }}" | Art Tukan
 @endsection
 
 @section('content')

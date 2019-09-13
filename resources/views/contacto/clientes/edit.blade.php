@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('contacto.clientes.form')
 @section('template_title')
-Editar el cliente "{{$cliente->persona->primer_nombre}} {{$cliente->persona->primer_apellido}}" | {{ config('app.name', 'Laravel') }}
+Editar el cliente "{{$cliente->persona->primer_nombre}} {{$cliente->persona->primer_apellido}}" | Art Tukan
 @endsection
 @section('content')
 

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('contacto.clientes.form')
 @section('template_title')
-Registrar un cliente | {{ config('app.name', 'Laravel') }}
+Registrar un cliente | Art Tukan
 @endsection
 @section('content')
 

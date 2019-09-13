@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.productos.form')
 @section('template_title')
-Registrar un producto | {{ config('app.name', 'Laravel') }}
+Registrar un producto | Art Tukan
 @endsection
 @section('content')
 

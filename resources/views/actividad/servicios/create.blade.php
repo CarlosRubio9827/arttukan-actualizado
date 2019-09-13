@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('actividad.servicios.form')
 @section('template_title')
-Registrar un servicio | {{ config('app.name', 'Laravel') }}
+Registrar un servicio | Art Tukan
 @endsection
 @section('content')
 

@@ -1,6 +1,6 @@
 @extends('layouts.store.main')
 @section('template_title')
-Lista de servicios | {{ config('app.name', 'Laravel') }}
+Lista de servicios | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/select2.css') }}" type="text/css"/>

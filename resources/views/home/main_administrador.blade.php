@@ -67,27 +67,8 @@ Página principal | ArtTukan
 
                 <!--Grid row-->
                 <div class="row wow fadeIn">
-                    <!--Grid column-->
-                    <div class="col-md-6 mb-4">
-   
-                       <!--Card-->
-                       <div class="card mb-4 hoverable">
-   
-                           <!--Card content-->
-                           <div class="card-body">
-   
-                               <div id="ordenes-container"></div>
-   
-                           </div>
-   
-                       </div>
-                       <!--/.Card-->
-   
-                       
-                   </div>
-                   <!--Grid column-->     
-  <!--Grid column-->
-  <div class="col-md-6 mb-4">
+                   
+  <div class="col-md-12 mb-4">
 
     <!--Card-->
     <div class="card mb-4 hoverable">
@@ -117,79 +98,79 @@ Página principal | ArtTukan
 @section('js_links')
 <script type="text/javascript">
 
-array_ordenes = @json($JSON_ordenes);
+//array_ordenes = @json($JSON_ordenes);
 array_solicitudes = @json($JSON_solicitudes);
 array_ventas = @json($JSON_ventas);
 
-Highcharts.chart('ordenes-container', {
+// Highcharts.chart('ordenes-container', {
 
-chart: {
+// chart: {
 
-    type: 'pie',
+//     type: 'pie',
 
-    options3d: {
+//     options3d: {
 
-        enabled: true,
+//         enabled: true,
 
-        alpha: 45
+//         alpha: 45
 
-    }
+//     }
 
-},
+// },
 
-title: {
+// title: {
 
-text: 'Ordenes'
+// text: 'Ordenes'
 
-},
+// },
 
-subtitle: {
+// subtitle: {
 
-    text: 'Cantidad de ordenes registradas'
+//     text: 'Cantidad de ordenes registradas'
 
-},
+// },
 
-tooltip: {
+// tooltip: {
 
-pointFormat: '<small>{point.y} ordenes</small>'
+// pointFormat: '<small>{point.y} ordenes</small>'
 
-},
+// },
 
-plotOptions: {
+// plotOptions: {
 
-    pie: {
+//     pie: {
 
-        innerSize: 100,
+//         innerSize: 100,
 
-        depth: 45,
+//         depth: 45,
 
-        allowPointSelect: true,
+//         allowPointSelect: true,
 
-  cursor: 'pointer',
+//   cursor: 'pointer',
 
-  dataLabels: {
+//   dataLabels: {
 
-    enabled: false
+//     enabled: false
 
-  },
+//   },
 
-  showInLegend: true
+//   showInLegend: true
 
-    }
+//     }
 
-},
+// },
 
-series: [{
+// series: [{
 
-    name: 'Ordenes',
+//     name: 'Ordenes',
 
-    colorByPoint: true,
+//     colorByPoint: true,
 
-    data:  array_ordenes 
+//     data:  array_ordenes 
 
-}]
+// }]
 
-});
+// });
 
 
 Highcharts.chart('solicitudes-container', {

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.productos.form')
 @section('template_title')
-Editar el producto "{{ $producto->nombre }}" | {{ config('app.name', 'Laravel') }}
+Editar el producto "{{ $producto->nombre }}" | Art Tukan
 @endsection
 @section('content')
 

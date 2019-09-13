@@ -1,6 +1,6 @@
 @extends('layouts.guest.main')
 @section('template_title')
-Mensaje recuperación | {{ config('app.name', 'Laravel') }}
+Mensaje recuperación | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/guest/auth/style.css') }}" type="text/css">

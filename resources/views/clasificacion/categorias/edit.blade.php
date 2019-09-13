@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('clasificacion.categorias.form')
 @section('template_title')
-Editar la categoria "{{ $categoria->nombre }}" | {{ config('app.name', 'Laravel') }}
+Editar la categoria "{{ $categoria->nombre }}" | Art Tukan
 @endsection
 @section('content')
 

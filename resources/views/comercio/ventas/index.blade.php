@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.comercio.ventas.div_ventas', array('ventas'=>$ventas))
 @section('template_title')
-Lista de ventas | {{ config('app.name', 'Laravel') }}
+Lista de ventas | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/addons/datatables.min.css') }}" type="text/css">

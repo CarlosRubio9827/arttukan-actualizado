@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('clasificacion.categorias.form')
 @section('template_title')
-Registrar una categoria | {{ config('app.name', 'Laravel') }}
+Registrar una categoria | Art Tukan
 @endsection
 @section('content')
 

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.root.usuarios.img', array('usuario'=>$usuario))
 @section('template_title')
-Información del usuario "{{ $usuario->name }}" | {{ config('app.name', 'Laravel') }}
+Información del usuario "{{ $usuario->name }}" | Art Tukan
 @endsection
 
 @section('css_links')

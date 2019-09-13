@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Validator;
 Use SweetAlert;
 Use DB;
 use Carbon\Carbon;
-
+use SebastianBergmann\Environment\Console;
 
 class OrdenController extends Controller
 {
@@ -123,7 +123,7 @@ class OrdenController extends Controller
 })))->get();
        return View::make('actividad.ordenes.create')->with(compact('orden','editar','paises','clientes','estados_ordenes'));
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *
@@ -133,11 +133,11 @@ class OrdenController extends Controller
     {
         Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR'],TRUE);
         $rules = array(
-                'nombre'                   => 'required|max:50',
+              //  'nombre'                   => 'required|max:50',
                 'barrio'                   => 'required|max:50',
             'direccion'                   => 'required|max:50',
-            'latitud'                   => 'required|max:50',
-            'longitud'                   => 'required|max:50',
+           // 'latitud'                   => 'required|max:50',
+            //'longitud'                   => 'required|max:50',
             'ciudad_id'              => 'required',
             'cliente_id'                   => 'required',
             'fecha_inicio'                   => 'required|date'
@@ -156,10 +156,10 @@ class OrdenController extends Controller
             $direccion = new Direccion;
             $cliente = Cliente::findOrFail($request->cliente_id);
             $ciudad = Ciudad::findOrFail($request->ciudad_id);
-            $ubicacion->latitud = $request->latitud;
-            $ubicacion->longitud = $request->longitud;
+            $ubicacion->latitud = "3.5221006057596975";
+            $ubicacion->longitud = "-76.29353920932567";
             $ubicacion->save();        
-            $orden->nombre = $request->nombre;   
+            $orden->nombre = "Solicitud de Servicio";   
             $orden->fecha_inicio = $request->fecha_inicio;
 $carbon_fecha = Carbon::parse($orden->fecha_inicio);
             if($carbon_fecha->isFuture()){
@@ -238,12 +238,12 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
     {
         Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR'],TRUE);
         $rules = array(
-            'nombre'                   => 'required|max:50',
+           // 'nombre'                   => 'required|max:50',
             'barrio'                   => 'required|max:50',
             'estado'                   => 'required|in:Abierta,Cerrada,Cancelada,Pendiente',
         'direccion'                   => 'required|max:50',
-        'latitud'                   => 'required|max:50',
-        'longitud'                   => 'required|max:50',
+        //'latitud'                   => 'required|max:50',
+        //'longitud'                   => 'required|max:50',
         'ciudad_id'              => 'required',
         'cliente_id'                   => 'required',
         'fecha_inicio'                   => 'required|date'
@@ -251,8 +251,7 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
 
     $validator = Validator::make($request->all(), $rules);
 
-
-    if ($validator->fails()) {
+        if ($validator->fails()) {
         SweetAlert::error('Error','Errores en el formulario.');
         return Redirect::to('ordenes/'+$id+'/edit')
             ->withErrors($validator);
@@ -262,10 +261,10 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
         $ubicacion = Ubicacion::findOrFail($direccion->ubicacion_id);
         $cliente = Cliente::findOrFail($request->cliente_id);
         $ciudad = Ciudad::findOrFail($request->ciudad_id);
-        $ubicacion->latitud = $request->latitud;
-        $ubicacion->longitud = $request->longitud;
+        $ubicacion->latitud = "3.5221006057596975";
+            $ubicacion->longitud = "-76.29353920932567";
         $ubicacion->save();       
-        $orden->nombre = $request->nombre; 
+        $orden->nombre = "Solicitud de Servicio"; 
         $orden->estado = $request->estado; 
         $orden->fecha_inicio = $request->fecha_inicio;
         
@@ -379,7 +378,7 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
             Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR'],TRUE);
             try{
                 $rules = array(
-                    'nombre'                   => 'required|max:50',
+                    //'nombre'                   => 'required|max:50',
                     'valor_unitario'                   => 'numeric|required|digits_between:1,12',
                     'cantidad'                   => 'numeric|required|digits_between:1,12',
                 'orden_id'                   => 'required',
@@ -397,7 +396,7 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
                 $orden = Orden::findOrFail($request->orden_id);
                 $colaborador = Colaborador::find($request->colaborador_id);
                 $servicio = Servicio::findOrFail($request->servicio_id);
-                $detalle->nombre = $request->nombre;
+                $detalle->nombre = "Solicitud de Servicio";
                 $detalle->valor_unitario = $request->valor_unitario;
                 $detalle->cantidad = $request->cantidad;
                 $detalle->fecha_inicio = $request->fecha_inicio;
@@ -428,7 +427,7 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
                     Auth::user()->authorizeRoles(['ROLE_ROOT','ROLE_ADMINISTRADOR'],TRUE);
                     try{
                         $rules = array(
-                            'edit_nombre'                   => 'required|max:50',
+                            //'edit_nombre'                   => 'required|max:50',
                             'edit_valor_unitario'                   => 'numeric|required|digits_between:1,12',
                             'edit_cantidad'                   => 'numeric|required|digits_between:1,12',
                         'edit_servicio_id'                   => 'required',
@@ -445,7 +444,7 @@ $carbon_fecha = Carbon::parse($orden->fecha_inicio);
                         $detalle = Detalle_orden::findOrFail($id);
                         $colaborador = Colaborador::find($request->edit_colaborador_id);
                         $servicio = Servicio::findOrFail($request->edit_servicio_id);
-                        $detalle->nombre = $request->edit_nombre;
+                        $detalle->nombre = "Solicitud de Servicio";
                         $detalle->valor_unitario = $request->edit_valor_unitario;
                         $detalle->cantidad = $request->edit_cantidad;
                         $detalle->fecha_inicio = $request->edit_fecha_inicio;

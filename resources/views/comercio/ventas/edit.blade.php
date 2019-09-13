@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('comercio.ventas.form')
 @section('template_title')
-Editar la venta #{{ $venta->id }} | {{ config('app.name', 'Laravel') }}
+Editar la venta #{{ $venta->id }} | Art Tukan
 @endsection
 @section('content')
 

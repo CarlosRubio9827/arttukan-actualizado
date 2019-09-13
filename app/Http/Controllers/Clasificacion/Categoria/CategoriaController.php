@@ -71,7 +71,7 @@ class CategoriaController extends Controller
         } else {
             $categoria = new Categoria;
             $categoria->nombre = $request->nombre; 
-            $categoria->etiqueta = $request->etiqueta; 
+            //$categoria->etiqueta = $request->etiqueta; 
             $categoria->categoria()->associate(Categoria::find($request->categoria_id));      
             $categoria->save();        
 

@@ -100,7 +100,7 @@ class CompraController extends Controller
             $compra->fecha = $request->fecha;
            $compra->save();        
 
-            SweetAlert::success('Exito','La compra #'.$compra->id.' ha sido registrada.');
+            SweetAlert::success('Exito','La producción #'.$compra->id.' ha sido registrada.');
             return Redirect::to('compras/'.$compra->id);
         }
     }
@@ -147,7 +147,7 @@ class CompraController extends Controller
         $compra = Compra::findOrFail($id);
         $compra->fecha = $request->fecha;
         $compra->save();
-        SweetAlert::success('Exito','La compra #'.$compra->id.' ha sido editada.');
+        SweetAlert::success('Exito','La producción #'.$compra->id.' ha sido editada.');
         return Redirect::to('compras');
     }
     }

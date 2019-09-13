@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.main')
 @include('include.root.usuarios.img', array('usuario'=>$cliente->persona->usuario))
 @section('template_title')
-Información del cliente "{{$cliente->persona->primer_nombre}} {{$cliente->persona->primer_apellido}}" | {{ config('app.name', 'Laravel') }}
+Información del cliente "{{$cliente->persona->primer_nombre}} {{$cliente->persona->primer_apellido}}" | Art Tukan
 @endsection
 @section('css_links')
 <link rel="stylesheet" href="{{ asset('css/dashboard/profile-img.css') }}" type="text/css">
