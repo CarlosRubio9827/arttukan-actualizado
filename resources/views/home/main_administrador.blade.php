@@ -67,8 +67,27 @@ Página principal | ArtTukan
 
                 <!--Grid row-->
                 <div class="row wow fadeIn">
-                   
-  <div class="col-md-12 mb-4">
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+   
+                       <!--Card-->
+                       <div class="card mb-4 hoverable">
+   
+                           <!--Card content-->
+                           <div class="card-body">
+   
+                               <div id="ordenes-container"></div>
+   
+                           </div>
+   
+                       </div>
+                       <!--/.Card-->
+   
+                       
+                   </div>
+                   <!--Grid column-->     
+  <!--Grid column-->
+  <div class="col-md-6 mb-4">
 
     <!--Card-->
     <div class="card mb-4 hoverable">
@@ -97,222 +116,114 @@ Página principal | ArtTukan
 @endsection
 @section('js_links')
 <script type="text/javascript">
-
-//array_ordenes = @json($JSON_ordenes);
+array_ordenes = @json($JSON_ordenes);
 array_solicitudes = @json($JSON_solicitudes);
 array_ventas = @json($JSON_ventas);
-
-// Highcharts.chart('ordenes-container', {
-
-// chart: {
-
-//     type: 'pie',
-
-//     options3d: {
-
-//         enabled: true,
-
-//         alpha: 45
-
-//     }
-
-// },
-
-// title: {
-
-// text: 'Ordenes'
-
-// },
-
-// subtitle: {
-
-//     text: 'Cantidad de ordenes registradas'
-
-// },
-
-// tooltip: {
-
-// pointFormat: '<small>{point.y} ordenes</small>'
-
-// },
-
-// plotOptions: {
-
-//     pie: {
-
-//         innerSize: 100,
-
-//         depth: 45,
-
-//         allowPointSelect: true,
-
-//   cursor: 'pointer',
-
-//   dataLabels: {
-
-//     enabled: false
-
-//   },
-
-//   showInLegend: true
-
-//     }
-
-// },
-
-// series: [{
-
-//     name: 'Ordenes',
-
-//     colorByPoint: true,
-
-//     data:  array_ordenes 
-
-// }]
-
-// });
-
-
-Highcharts.chart('solicitudes-container', {
-
-    chart: {
-
-        type: 'pie',
-
-        options3d: {
-
-            enabled: true,
-
-            alpha: 45
-
-        }
-
-    },
-
-    title: {
-
-    text: 'Solicitudes'
-
-  },
-
-  subtitle: {
-
-        text: 'Cantidad de solicitudes registradas'
-
-    },
-
-  tooltip: {
-
-    pointFormat: '<small>{point.y} solicitudes</small>'
-
-  },
-
-    plotOptions: {
-
-        pie: {
-
-            innerSize: 100,
-
-            depth: 45,
-
-            allowPointSelect: true,
-
-      cursor: 'pointer',
-
-      dataLabels: {
-
-        enabled: false
-
-      },
-
-      showInLegend: true
-
-        }
-
-    },
-
-    series: [{
-
-        name: 'Solicitudes',
-
-        colorByPoint: true,
-
-        data:  array_solicitudes 
-
-    }]
-
-});
-
-Highcharts.chart('ventas-container', {
-
+Highcharts.chart('ordenes-container', {
 chart: {
-
     type: 'pie',
-
     options3d: {
-
         enabled: true,
-
         alpha: 45
-
     }
-
 },
-
 title: {
-
-text: 'Ventas'
-
+text: 'Ordenes'
 },
-
 subtitle: {
-
-    text: 'Cantidad de ventas registradas'
-
+    text: 'Cantidad de ordenes registradas'
 },
-
 tooltip: {
-
-pointFormat: '<small>{point.y} ventas</small>'
-
+pointFormat: '<small>{point.y} ordenes</small>'
 },
-
 plotOptions: {
-
     pie: {
-
         innerSize: 100,
-
         depth: 45,
-
         allowPointSelect: true,
-
   cursor: 'pointer',
-
   dataLabels: {
-
     enabled: false
-
   },
-
   showInLegend: true
-
     }
-
 },
-
 series: [{
-
-    name: 'Ventas',
-
+    name: 'Ordenes',
     colorByPoint: true,
-
-    data:  array_ventas 
-
+    data:  array_ordenes 
 }]
-
 });
-
+Highcharts.chart('solicitudes-container', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45
+        }
+    },
+    title: {
+    text: 'Solicitudes'
+  },
+  subtitle: {
+        text: 'Cantidad de solicitudes registradas'
+    },
+  tooltip: {
+    pointFormat: '<small>{point.y} solicitudes</small>'
+  },
+    plotOptions: {
+        pie: {
+            innerSize: 100,
+            depth: 45,
+            allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: false
+      },
+      showInLegend: true
+        }
+    },
+    series: [{
+        name: 'Solicitudes',
+        colorByPoint: true,
+        data:  array_solicitudes 
+    }]
+});
+Highcharts.chart('ventas-container', {
+chart: {
+    type: 'pie',
+    options3d: {
+        enabled: true,
+        alpha: 45
+    }
+},
+title: {
+text: 'Ventas'
+},
+subtitle: {
+    text: 'Cantidad de ventas registradas'
+},
+tooltip: {
+pointFormat: '<small>{point.y} ventas</small>'
+},
+plotOptions: {
+    pie: {
+        innerSize: 100,
+        depth: 45,
+        allowPointSelect: true,
+  cursor: 'pointer',
+  dataLabels: {
+    enabled: false
+  },
+  showInLegend: true
+    }
+},
+series: [{
+    name: 'Ventas',
+    colorByPoint: true,
+    data:  array_ventas 
+}]
+});
     </script>
 
 

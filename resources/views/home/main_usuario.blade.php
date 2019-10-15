@@ -28,81 +28,7 @@ Página principal | Art Tukan
         <!--Card content-->
         <div class="card-body d-sm-flex justify-content-between">
 <div class="tabs">
-  {{--Care loco--}}
-        <div class="tab-2" data-toggle="tooltip" data-placement="bottom" title="Tienda">
-          <label for="tab2-1" class="waves-effect"><i class="fas fa-store"></i> Tienda</label>
-          <input id="tab2-1" name="tabs-two" type="radio" {{($estado && ($estado == "Enviado" || $estado == "Entregado")) ? '' :'checked'}}>
-          <div>
-            <!-- Heading -->
-            <div class="card mb-4 wow fadeIn hoverable">
-
-                    <!--Card content-->
-                    <div class="card-body d-sm-flex justify-content-between">
-        
-                        <h4 class="mb-2 mb-sm-0 pt-1">
-                        <span><i class="fas fa-store"></i></span> <span> Bienvenido a la tienda de Art Tukan</span>
-                        </h4>
-        
-                    </div>
-        
-                </div>
-                <div class="container-fluid">
-                  
-                  {{-- Tarjetas--}}
-
-<div class="row">
-  <div class="col-md-6">
-<!-- Card -->
-<div class="card card-image" style="background-image: url({{ asset('img/arttukan/fondoProductos.jpg') }}) ;">
-
-  <!-- Content -->
-  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-    <div>
-      <h5><i class="fas fa fa-box-open mr-1"></i> Productos</h5>
-      <h3 class="card-title pt-2"><strong>Prendas y Accesorios</strong></h3>
-      <p>
-        Bolsas, Prendas de vestir, gorras, mugs, souvenir y mucho más.
-      </p>
-      <a href="{{ route('store.productos') }}" class="btn btn-success"><i class="far fa-eye"></i> Ver Productos</a>
-    </div>
-  </div>
-
-</div>
-<!-- Card -->
-  </div>
-
-  <div class="col-md-6"> 
-    <!-- Card -->
-<div class="card card-image" style="background-image: url({{ asset('img/arttukan/831portafolio_page-0006.jpg') }}");>
-
-  <!-- Content -->
-  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-    <div>
-      <h5><i class="fas fa fa-cogs mr-1"></i> Servicios</h5>
-      <h3 class="card-title pt-2"><strong>Nuestros Servicios</strong></h3>
-      <p>
-        Ofrecemos servicio de estampado, sublimación, maquila y confección.
-      </p>
-      
-      <a href="{{ route('store.servicios') }}" class="btn btn-success"><i class="far fa-eye"></i> Ver Servicios</a>
-    </div>
-  </div>
-
-</div>
-<!-- Card -->
-    </div>
-</div>
-
-
-
-
-
-                  {{--Fin de Tarjetas--}}
-                  
-
-                  </div>
-                  </div>
-        </div>
+  
   
     <div class="tab-2" data-toggle="tooltip" data-placement="bottom" title="Lista de ordenes">
         <label for="tab2-1" class="waves-effect"><i class="fas fa-toolbox fa-lg mr-1"></i> Ordenes</label>
@@ -226,7 +152,14 @@ Página principal | Art Tukan
 </div>
     @yield('div_ordenes') </div>
         @endif
+
+        
       </div>
+      
+      
+      
+
+
 @endsection
 @section('js_links')
 <!-- DataTables core JavaScript -->
